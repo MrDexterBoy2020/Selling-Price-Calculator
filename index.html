@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bigly Selling Price Calculator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <img src="logo.png" alt="Bigly Logo" class="logo" onerror="this.style.display='none'">
+    <h1 class="site-title">BIGLY SELLING PRICE CALCULATOR</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== INPUT FORM SECTION ===== -->
+    <section class="card">
+      <h2 class="card-title">Maal ki Details Daalo</h2>
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="pricePerKg">Price Per KG (₹)</label>
+          <input type="number" id="pricePerKg" placeholder="jaise: 300" min="0" step="any">
+        </div>
+
+        <div class="field">
+          <label for="quantity">Quantity (kg)</label>
+          <input type="number" id="quantity" placeholder="jaise: 50" min="0" step="any">
+        </div>
+
+        <div class="field">
+          <label for="waste">Waste (gram)</label>
+          <input type="number" id="waste" placeholder="jaise: 500" min="0" step="any">
+        </div>
+
+        <div class="field">
+          <label for="transport">Transportation (₹)</label>
+          <input type="number" id="transport" value="5" min="0" step="any">
+        </div>
+
+        <div class="field">
+          <label for="packingSize">Packing Size (gram)</label>
+          <input type="number" id="packingSize" placeholder="jaise: 500" min="0" step="any">
+        </div>
+
+        <div class="field">
+          <label for="profitPercent">Profit %</label>
+          <input type="number" id="profitPercent" value="15" min="0" step="any">
+        </div>
+
+        <div class="field">
+          <label for="mrp">MRP (₹) <span class="optional">- agar ho to</span></label>
+          <input type="number" id="mrp" placeholder="jaise: 120" min="0" step="any">
+        </div>
+
+        <div class="field">
+          <label for="marketProfitPercent">Market Profit % <span class="optional">- agar MRP nahi ho to</span></label>
+          <input type="number" id="marketProfitPercent" placeholder="jaise: 20" min="0" step="any">
+        </div>
+
+      </div>
+
+      <div class="button-row">
+        <button id="calculateBtn" class="btn btn-primary">Calculate</button>
+        <button id="resetBtn" class="btn btn-secondary">Naya Product</button>
+      </div>
+    </section>
+
+    <!-- ===== RESULT SECTION ===== -->
+    <section class="card result-card" id="resultCard">
+      <h2 class="card-title">Result</h2>
+      <div class="result-grid">
+
+        <div class="result-row">
+          <span class="result-label" id="basePriceLabel">MRP / Market Price</span>
+          <span class="result-value" id="basePriceValue">—</span>
+        </div>
+
+        <div class="result-row">
+          <span class="result-label">Discount (₹)</span>
+          <span class="result-value" id="discountValue">—</span>
+        </div>
+
+        <div class="result-row">
+          <span class="result-label">Discount (%)</span>
+          <span class="result-value" id="discountPercentValue">—</span>
+        </div>
+
+        <div class="result-row">
+          <span class="result-label">Unit</span>
+          <span class="result-value" id="unitValue">—</span>
+        </div>
+
+        <div class="result-row result-highlight">
+          <span class="result-label">Selling Price</span>
+          <span class="result-value" id="sellingPriceValue">—</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>Bigly &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
