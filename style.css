@@ -1,16 +1,19 @@
 :root {
-  --bg: #211712;
-  --bg-soft: #2b1f17;
-  --card: #2f2319;
-  --paper: #f4ecda;
-  --paper-line: #d9cba9;
-  --gold: #d6a233;
-  --gold-soft: #8c6a26;
-  --green: #6f8f5b;
-  --red: #b24a3b;
-  --ink: #241a12;
-  --text-light: #f4ecda;
-  --text-muted: #b6a487;
+  --bg: #eef1fb;
+  --bg-soft: #ffffff;
+  --card: #ffffff;
+  --paper: #f3f5fc;
+  --paper-line: #d7ddf4;
+  --navy: #1b3b8c;
+  --navy-soft: #4a5fb0;
+  --periwinkle: #5c6eea;
+  --gold: #e9a72a;
+  --gold-soft: #b8811a;
+  --green: #4a8f5b;
+  --red: #c0392b;
+  --ink: #1a1a2e;
+  --text-light: #1a1a2e;
+  --text-muted: #6b7280;
 }
 
 * {
@@ -47,7 +50,7 @@ body {
   font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 22px;
-  color: var(--gold);
+  color: var(--navy);
   margin: 0;
   letter-spacing: 0.3px;
 }
@@ -64,10 +67,10 @@ body {
 
 .card {
   background: var(--card);
-  border: 1px solid rgba(140, 106, 38, 0.3);
+  border: 1px solid rgba(92, 110, 234, 0.25);
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 40px -20px rgba(27, 59, 140, 0.18);
 }
 
 .card-title {
@@ -75,7 +78,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   margin: 0 0 18px;
-  color: var(--text-light);
+  color: var(--navy);
 }
 
 /* ===== FORM ===== */
@@ -106,7 +109,7 @@ body {
 .field select {
   background: var(--paper);
   color: var(--ink);
-  border: 2px solid transparent;
+  border: 2px solid var(--paper-line);
   border-radius: 10px;
   padding: 10px 12px;
   font-family: 'Space Mono', monospace;
@@ -117,7 +120,7 @@ body {
 }
 
 .field input:focus {
-  border-color: var(--gold);
+  border-color: var(--periwinkle);
 }
 
 /* ===== BUTTONS ===== */
@@ -139,24 +142,24 @@ body {
 }
 
 .btn-primary {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: #ffffff;
 }
 
 .btn-secondary {
   background: transparent;
-  border: 1px solid rgba(140, 106, 38, 0.5);
-  color: var(--text-muted);
+  border: 1px solid var(--periwinkle);
+  color: var(--navy-soft);
 }
 
 /* ===== RESULT SECTION ===== */
 .result-card {
-  background: var(--paper);
+  background: var(--card);
   color: var(--ink);
 }
 
 .result-card .card-title {
-  color: var(--ink);
+  color: var(--navy);
 }
 
 .result-grid {
@@ -179,18 +182,19 @@ body {
 }
 
 .result-label {
-  color: var(--gold-soft);
+  color: var(--navy-soft);
 }
 
 .result-value {
   font-weight: 700;
+  color: var(--ink);
 }
 
 .result-highlight {
   margin-top: 8px;
   padding: 14px 16px;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--navy);
+  color: #ffffff;
   border-radius: 12px;
   border-bottom: none;
 }
